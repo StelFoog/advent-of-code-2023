@@ -21,7 +21,7 @@ const DEFAULT_EXAMPLE_FILE = path.join(EXAMPLES_FOLDER, 'default.txt');
 export async function getInput(day: number, useExample = false): Promise<string> {
 	const folder = useExample ? EXAMPLES_FOLDER : INPUTS_FOLDER;
 	const defaultFile = useExample ? DEFAULT_EXAMPLE_FILE : DEFAULT_INPUT_FILE;
-	const dayFile = path.join(folder, `${day}.tsx`);
+	const dayFile = path.join(folder, `${day}.txt`);
 
 	if (existsSync(dayFile)) return readFile(dayFile).then((res) => res.toString());
 	if (existsSync(defaultFile)) return readFile(defaultFile).then((res) => res.toString());
