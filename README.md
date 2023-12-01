@@ -4,9 +4,9 @@ My solutions to Advent of Code 2023 using TypeScript and Bun.
 
 ## Progress
 
-- [ ] Day 1
-  - [ ] Task 1
-  - [ ] Task 2
+- [x] Day 1
+  - [x] Task 1
+  - [x] Task 2
 - [ ] Day 2
   - [ ] Task 1
   - [ ] Task 2
