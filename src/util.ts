@@ -15,16 +15,18 @@ export function taskFinder(task: string): TaskSelection {
 
 const INPUTS_FOLDER = path.join(process.cwd(), 'inputs');
 const DEFAULT_INPUT_FILE = path.join(INPUTS_FOLDER, 'default.txt');
-const EXAMPLES_FOLDER = path.join(process.cwd(), 'examples');
-const DEFAULT_EXAMPLE_FILE = path.join(EXAMPLES_FOLDER, 'default.txt');
+const EXAMPLE_FILE = path.join(INPUTS_FOLDER, 'example.txt');
 
 export async function getInput(day: number, useExample = false): Promise<string> {
-	const folder = useExample ? EXAMPLES_FOLDER : INPUTS_FOLDER;
-	const defaultFile = useExample ? DEFAULT_EXAMPLE_FILE : DEFAULT_INPUT_FILE;
-	const dayFile = path.join(folder, `${day}.txt`);
+	if (useExample) {
+		if (!existsSync(EXAMPLE_FILE)) throw "The example file doesn't exist";
+		return readFile(EXAMPLE_FILE).then((res) => res.toString());
+	}
+	const dayFile = path.join(INPUTS_FOLDER, `${day}.txt`);
 
 	if (existsSync(dayFile)) return readFile(dayFile).then((res) => res.toString());
-	if (existsSync(defaultFile)) return readFile(defaultFile).then((res) => res.toString());
+	if (existsSync(DEFAULT_INPUT_FILE))
+		return readFile(DEFAULT_INPUT_FILE).then((res) => res.toString());
 
 	throw `Neither day (${day}) nor default input file exists`;
 }

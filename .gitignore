@@ -175,6 +175,5 @@ dist
 .DS_Store
 
 # Inputs
-/examples/default.txt
 /inputs/*
 !/inputs/.gitkeep
