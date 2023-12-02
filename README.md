@@ -7,9 +7,9 @@ My solutions to Advent of Code 2023 using TypeScript and Bun.
 - [x] Day 1
   - [x] Task 1
   - [x] Task 2
-- [ ] Day 2
-  - [ ] Task 1
-  - [ ] Task 2
+- [x] Day 2
+  - [x] Task 1
+  - [x] Task 2
 - [ ] Day 3
   - [ ] Task 1
   - [ ] Task 2
