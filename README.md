@@ -19,7 +19,7 @@ My solutions to Advent of Code 2023 using TypeScript and Bun.
 - [ ] Day 5
   - [ ] Task 1
   - [ ] Task 2
-- [ ] Day 6
+- [ ] Day 6 ❄️
   - [ ] Task 1
   - [ ] Task 2
 - [ ] Day 7
@@ -73,7 +73,7 @@ My solutions to Advent of Code 2023 using TypeScript and Bun.
 - [ ] Day 23
   - [ ] Task 1
   - [ ] Task 2
-- [ ] Day 24
+- [ ] Day 24 🎄
   - [ ] Task 1
   - [ ] Task 2
 - [ ] Day 25
